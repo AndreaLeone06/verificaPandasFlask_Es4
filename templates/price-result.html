@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Risultato prezzo medio per quartiere{% endblock %}
+
+{% block content %}
+  <h1>Risultato prezzo medio per quartiere</h1>
+  {% if result %}
+    <p>Il prezzo medio del quartiere {{ neighborhood_selected }} è di {{ result }} €</p>
+  {% endif %}
+  <p><a href="{{ url_for('price') }}">Torna indietro</a></p>
+{% endblock %}
